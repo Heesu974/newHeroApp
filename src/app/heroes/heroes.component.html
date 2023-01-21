@@ -1,13 +1,10 @@
 <div class="heroes-container">
   <h3>Heroes List</h3>
   <ul>
-    <li
-      *ngFor="let hero of heroes"
-      class="hero"
-      routerLink="detail/{{ hero.id }}"
-    >
+    <li *ngFor="let hero of heroes" class="hero" (click)="onSelect(hero)">
       <span class="hero-id">{{ hero.id }}</span>
       <span class="hero-name">{{ hero.name }}</span>
     </li>
   </ul>
 </div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

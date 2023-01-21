@@ -1,15 +1,1 @@
-<div class="hero-detail-container" *ngIf="hero">
-  <h3>{{ hero.name | uppercase }} Details</h3>
-  <div class="detail-form">
-    <div>
-      <span>id :</span>
-      <span>{{ hero.id }}</span>
-    </div>
-    <div>
-      <span>Hero name :</span>
-      <input type="text" />
-    </div>
-
-    <button>Back</button>
-  </div>
-</div>
+<div *ngIf="hero">{{ hero.name }} detail component is here</div>

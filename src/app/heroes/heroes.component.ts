@@ -8,4 +8,10 @@ import { Hero, heroes } from '../heroes';
 })
 export class HeroesComponent {
   heroes: Hero[] = heroes;
+  selectedHero!: Hero;
+
+  onSelect(hero: Hero) {
+    this.selectedHero = hero;
+    console.log('selectedHero', this.selectedHero);
+  }
 }

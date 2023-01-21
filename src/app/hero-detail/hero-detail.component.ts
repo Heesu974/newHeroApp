@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input } from '@angular/core';
+
 import { Hero, heroes } from '../heroes';
 
 @Component({
@@ -8,16 +8,9 @@ import { Hero, heroes } from '../heroes';
   styleUrls: ['./hero-detail.component.css'],
 })
 export class HeroDetailComponent {
-  hero!: Hero | undefined;
-  heroes: Hero[] = heroes;
-  constructor(private route: ActivatedRoute) {}
+  @Input() hero!: Hero;
 
-  ngOnInit() {
-    const routeParams = this.route.snapshot.paramMap;
-    const heroIdFromRoute = Number(routeParams.get('id'));
+  constructor() {}
 
-    console.log(heroIdFromRoute);
-
-    this.hero = this.heroes.find((hero) => hero.id === heroIdFromRoute);
-  }
+  ngOnInit() {}
 }
