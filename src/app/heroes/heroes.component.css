@@ -1,0 +1,21 @@
+.hero {
+  border: 1px solid black;
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.hero:hover {
+  background: #efefef;
+}
+.hero-id {
+  width: 10%;
+  text-align: center;
+}
+.hero-name {
+  width: 90%;
+  text-align: center;
+}
