@@ -8,6 +8,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { RouterLink } from '@angular/router';
     HeroesComponent,
     HeroDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterLink],
+  imports: [BrowserModule, AppRoutingModule, RouterLink, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
