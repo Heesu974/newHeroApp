@@ -32,5 +32,8 @@ export class HeroesComponent {
   onSelect(hero: Hero) {
     this.selectedHero = hero;
     console.log('selectedHero', this.selectedHero);
+    this.messageservice.add(
+      `${this.selectedHero.id} ${this.selectedHero.name}가 선택되었습니다.`
+    );
   }
 }

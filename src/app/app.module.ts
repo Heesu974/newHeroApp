@@ -9,6 +9,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     CommonPageHeaderComponent,
     HeroesComponent,
     HeroDetailComponent,
+    MessagesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterLink, FormsModule],
   providers: [],

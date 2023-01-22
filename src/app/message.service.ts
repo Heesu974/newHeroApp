@@ -9,10 +9,10 @@ export class MessageService {
 
   add(message: string) {
     this.messages.push(message);
+    console.log('add에서', this.messages);
     return this.messages;
   }
   clear() {
     this.messages = [];
-    return this.messages;
   }
 }

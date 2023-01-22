@@ -1,0 +1,7 @@
+<div class="message-container">
+  <h2>Cached messages here</h2>
+  <button (click)="clear()">Reset</button>
+  <div *ngIf="messageservice.messages.length">
+    <p *ngFor="let message of messages">{{ message }}</p>
+  </div>
+</div>
