@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Hero } from '../heroes';
 import { HeroService } from '../hero.service';
-import { Observable } from 'rxjs';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -12,7 +12,12 @@ export class HeroesComponent {
   heroes: Hero[] = [];
   selectedHero!: Hero;
 
-  constructor(private heroservice: HeroService) {}
+  messages: string[] = [];
+
+  constructor(
+    private heroservice: HeroService,
+    private messageservice: MessageService
+  ) {}
 
   ngOnInit(): void {
     this.getHeroes();
@@ -22,6 +27,7 @@ export class HeroesComponent {
       console.log(observableHeroes);
       this.heroes = observableHeroes;
     });
+    this.messages = this.messageservice.messages;
   }
   onSelect(hero: Hero) {
     this.selectedHero = hero;
