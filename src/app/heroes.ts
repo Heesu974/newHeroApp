@@ -4,7 +4,7 @@ export interface Hero {
   power: string;
 }
 
-export const heroes: Hero[] = [
+export const HEROES: Hero[] = [
   {
     id: 1,
     name: 'me',
